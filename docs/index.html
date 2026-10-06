@@ -20,10 +20,14 @@
     font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     display:flex;flex-direction:column;align-items:center;padding:32px 20px 64px;
   }
-  .wrap{width:100%;max-width:620px}
-  h1{font-size:2rem;margin:.2em 0 .1em;letter-spacing:.5px}
-  h1 .pig{filter:saturate(1.1)}
-  .tag{color:var(--muted);margin:0 0 28px}
+  .title-row{
+  display:flex;justify-content:center;align-items:center;gap:14px;
+  margin:.2em 0 .1em;
+}
+h1{font-size:2rem;margin:0;letter-spacing:.5px;text-align:center}
+h1 .pig{filter:saturate(1.1)}
+.eyes{height:40px;width:auto;display:block}
+.tag{color:var(--muted);margin:0 0 28px;text-align:center}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:0 0 20px}
   .card h2{margin:0 0 12px;font-size:1.05rem;color:var(--accent2);text-transform:uppercase;letter-spacing:1px}
   ol{margin:0;padding-left:1.2em}
@@ -55,7 +59,10 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="title-row">
   <h1><span class="pig">🐷</span> MochiNet</h1>
+  <img class="eyes" src="./mochi-eyes.svg" alt="">
+</div>
   <p class="tag">ESP32-S3 wardriving companion + Piglet mesh Core. Flash it right from your browser.</p>
 
   <div class="card flash">

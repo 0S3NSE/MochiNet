@@ -1,0 +1,39 @@
+MochiNet — Creative Commons Attribution-NonCommercial 4.0 International
+SPDX-License-Identifier: CC-BY-NC-4.0
+
+Copyright (c) 2026 __0S3NSE__
+
+This work (the MochiNet firmware and associated files authored for this
+project) is licensed under the Creative Commons Attribution-NonCommercial
+4.0 International License (CC BY-NC 4.0).
+
+You are free to:
+  • Share  — copy and redistribute the material in any medium or format
+  • Adapt  — remix, transform, and build upon the material
+
+Under the following terms:
+  • Attribution — You must give appropriate credit (see CREDITS.md), provide
+    a link to the license, and indicate if changes were made.
+  • NonCommercial — You may not use the material for commercial purposes.
+
+No additional restrictions — You may not apply legal terms or technological
+measures that legally restrict others from doing anything the license permits.
+
+Full legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-nc/4.0/
+
+------------------------------------------------------------------------------
+NOTE ON SCOPE
+This license covers the original MochiNet files in this repository. It does
+NOT cover third-party components, which keep their own licenses:
+  • NimBLE-Arduino, Adafruit libraries, SmartRC-CC1101-Driver-Lib — as
+    distributed by their authors.
+  • The JCMK ESP-NOW protocol is reimplemented here, not copied; the Piglet
+    node firmware (hamspiced, CC BY-NC 4.0) is NOT included in this repo.
+See CREDITS.md for details.
+
+NOTE ON USE
+MochiNet includes WiFi/RF tools capable of disrupting networks. It is provided
+for authorized security testing and education only. The author is not liable
+for misuse. Using these tools against networks or devices you do not own or
+have permission to test is illegal in most jurisdictions.

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>MochiNet — Web Flasher</title>
+<!-- ESP Web Tools: browser-side flasher over Web Serial (Chrome/Edge/Opera, desktop). -->
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+  :root{
+    --bg:#12100f; --card:#1c1917; --ink:#f5ede6; --muted:#b9a99b;
+    --accent:#ff9db1; --accent2:#7fd1c4; --line:#2e2825;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:inherit}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    display:flex;flex-direction:column;align-items:center;padding:32px 20px 64px;
+  }
+  .wrap{width:100%;max-width:620px}
+  h1{font-size:2rem;margin:.2em 0 .1em;letter-spacing:.5px}
+  h1 .pig{filter:saturate(1.1)}
+  .tag{color:var(--muted);margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:0 0 20px}
+  .card h2{margin:0 0 12px;font-size:1.05rem;color:var(--accent2);text-transform:uppercase;letter-spacing:1px}
+  ol{margin:0;padding-left:1.2em}
+  ol li{margin:.35em 0}
+  .flash{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px}
+  esp-web-install-button{--esp-tools-button-color:#12100f;--esp-tools-button-text-color:#12100f}
+  button.installBtn{
+    background:var(--accent);color:#2a1116;border:0;border-radius:12px;
+    font:600 1.05rem/1 inherit;padding:16px 28px;cursor:pointer;
+  }
+  button.installBtn:hover{filter:brightness(1.05)}
+  .note{color:var(--muted);font-size:.9rem}
+  .unsupported{color:var(--accent);font-weight:600}
+  code{background:#000;padding:1px 6px;border-radius:5px;color:var(--accent2);font-size:.9em}
+  a{color:var(--accent2)}
+  .foot{color:var(--muted);font-size:.8rem;text-align:center;margin-top:8px}
+  hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1><span class="pig">🐷</span> MochiNet</h1>
+  <p class="tag">ESP32-S3 wardriving companion + Piglet mesh Core. Flash it right from your browser.</p>
+
+  <div class="card flash">
+    <esp-web-install-button manifest="./manifest-mochi.json">
+      <button class="installBtn" slot="activate">Install MochiNet (LOLIN S3 Mini)</button>
+      <span slot="unsupported" class="unsupported">
+        Your browser can't flash here — use desktop <b>Chrome</b>, <b>Edge</b>, or <b>Opera</b>.
+      </span>
+      <span slot="not-allowed" class="unsupported">
+        This page must be served over HTTPS (or localhost) to flash.
+      </span>
+    </esp-web-install-button>
+    <span class="note">Project still in ALPHA...</span>
+  </div>
+
+  <div class="card">
+    <h2>How to flash</h2>
+    <ol>
+      <li>Use a <b>Data</b> USB-C cable (not charge-only) on a desktop running Chrome / Edge / Opera.</li>
+      <li>Plug in the board while holding <b>BOOT</b> and click <b>Install</b> above.</li>
+      <li>Select the board's serial port in the browser dialog and confirm the install.</li>
+      <li>When it finishes, the board reboots into MochiNet. Done. Future updates can be done via Mochi access point (OTA)</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>If the port doesn't appear / install fails</h2>
+    <ol>
+      <li>Try a different cable/port first — charge-only cables are the #1 cause.</li>
+      <li>Put the board in <b>bootloader mode</b> manually: hold <code>BOOT</code>, tap <code>RST</code>, release <code>BOOT</code>, then click Install again.</li>
+      <li>Close the Arduino IDE / any serial monitor holding the port.</li>
+    </ol>
+    <hr>
+    <p class="note">Flashing does not erase your SD card. On first boot MochiNet creates its config;
+    see the project README for wiring and the <code>/wardriver.cfg</code>-style setup.</p>
+  </div>
+
+  <p class="foot">MochiNet · v1.0.0-alpha · created by 0SENS3. 
+  Interoperates with the JCMK / Piglet ESP-NOW node protocol.<br>
+  For authorized security testing and education only — only use the WiFi/RF tools on networks and devices you own or have permission to test.</p>
+</div>
+</body>
+</html>

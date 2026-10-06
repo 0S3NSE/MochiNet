@@ -1,0 +1,13 @@
+{
+  "name": "MochiNet S3",
+  "version": "1.0.0-alpha",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "firmware/mochinet-s3.ino.merged.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

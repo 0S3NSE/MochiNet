@@ -1,5 +1,7 @@
 ## BOM
 
+I understand a lot of the components you may have to buy in packs, making this project a bit more expensive as opposed to piece by piece. I am working on supplying assembly kits along with cases, but I highly encourage you start with the packs as well as the extra modules definitely come in handy!!!
+
 - **3.3v Buck Converter:** **TAKES 5V as INPUT - WILL SUPPLY CC1101/NRF24 - ESP32-S3 MINI - SSD1206**
 AliExpress:
 https://www.aliexpress.us/item/3256808071645977.html?spm=a2g0o.productlist.main.6.3c695b7enDtsna&algo_pvid=c6e5733c-b6f3-4b77-a3b3-7e385100a40d&algo_exp_id=c6e5733c-b6f3-4b77-a3b3-7e385100a40d-5&pdp_ext_f=%7B%22order%22%3A%2210019%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%213.07%212.97%21%21%213.07%212.97%21%4021030f4a17913175957864464e0f45%2112000044394285591%21sea%21US%212944737762%21X%211%210%21n_tag%3A-29919%3Bd%3Aa9149c4d%3Bm03_new_user%3A-29895%3BpisId%3A5000000218370769&curPageLogUid=VZrA4rT5nr5f&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008257960729%7C_p_origin_prod%3A

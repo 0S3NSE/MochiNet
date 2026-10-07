@@ -62,7 +62,7 @@ confirmed, and LTE-only cameras may never appear.
 ## Flashing
 
 ### Easiest — web browser
-👉 **[Flash](https://0s3nse.github.io/MochiNet/)** — flash MochiNet from your browser, no Arduino needed.
+👉 **[Flash](https://0s3nse.github.io/MochiNet/)** — Flash MochiNet from your browser, no Arduino needed.
 Plugin the board while holding **BOOT** press INSTALL in webflasher and select serial com port (verify by hitting **RST** while holding **BOOT** and see new port)
 *Instructions also in Flasher*
 

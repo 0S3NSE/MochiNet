@@ -7,9 +7,11 @@
 
   <!-- DISPLAY (I2C) -->
   <g>
-    <rect x="28" y="80" width="340" height="74" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
+    <rect x="28" y="80" width="340" height="114" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
     <rect x="28" y="80" width="6" height="74" rx="3" fill="#35c2b0"/>
-    <text x="46" y="100" fill="#35c2b0" font-size="13" font-weight="700">OLED DISPLAY · I²C (0x3C)</text>
+    <text x="46" y="100" fill="#35c2b0" font-size="13" font-weight="700">OLED DISPLAY · I²C </text>
+    <text x="46" y="122" fill="#d7cfc8" font-size="13">GND</text><text x="352" y="122" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck -</text>
+    <text x="46" y="142" fill="#d7cfc8" font-size="13">VCC</text><text x="352" y="142" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck +</text>
     <text x="46" y="122" fill="#d7cfc8" font-size="13">SDA</text><text x="352" y="122" fill="#35c2b0" font-size="13" text-anchor="end">GPIO8</text>
     <text x="46" y="142" fill="#d7cfc8" font-size="13">SCL</text><text x="352" y="142" fill="#35c2b0" font-size="13" text-anchor="end">GPIO9</text>
   </g>
@@ -19,6 +21,8 @@
     <rect x="28" y="166" width="340" height="114" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
     <rect x="28" y="166" width="6" height="114" rx="3" fill="#5a9bf0"/>
     <text x="46" y="186" fill="#5a9bf0" font-size="13" font-weight="700">SD CARD · SPI (FSPI)</text>
+    <text x="46" y="208" fill="#d7cfc8" font-size="13">VCC</text>  <text x="352" y="208" fill="#5a9bf0" font-size="13" text-anchor="end">5V Step Up OUT</text>
+    <text x="46" y="228" fill="#d7cfc8" font-size="13">GND</text><text x="352" y="228" fill="#5a9bf0" font-size="13" text-anchor="end">5V Step Up GND</text>
     <text x="46" y="208" fill="#d7cfc8" font-size="13">CS</text>  <text x="352" y="208" fill="#5a9bf0" font-size="13" text-anchor="end">GPIO10</text>
     <text x="46" y="228" fill="#d7cfc8" font-size="13">MOSI</text><text x="352" y="228" fill="#5a9bf0" font-size="13" text-anchor="end">GPIO11</text>
     <text x="46" y="248" fill="#d7cfc8" font-size="13">SCK</text> <text x="352" y="248" fill="#5a9bf0" font-size="13" text-anchor="end">GPIO12</text>
@@ -31,14 +35,15 @@
     <rect x="28" y="292" width="6" height="74" rx="3" fill="#5fd17a"/>
     <text x="46" y="312" fill="#5fd17a" font-size="13" font-weight="700">GPS · UART1 @ 9600</text>
     <text x="46" y="334" fill="#d7cfc8" font-size="13">RX  (← GPS TX)</text><text x="352" y="334" fill="#5fd17a" font-size="13" text-anchor="end">GPIO16</text>
-    <text x="46" y="354" fill="#8a8a90" font-size="12">TX unused · GND shared</text>
+    <text x="46" y="208" fill="#d7cfc8" font-size="13">VCC</text>  <text x="352" y="208" fill="#5a9bf0" font-size="13" text-anchor="end">5V Step Up OUT</text>
+    <text x="46" y="228" fill="#d7cfc8" font-size="13">GND</text><text x="352" y="228" fill="#5a9bf0" font-size="13" text-anchor="end">5V Step Up GND</text>
   </g>
 
   <!-- BUTTONS -->
   <g>
     <rect x="28" y="378" width="340" height="114" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
     <rect x="28" y="378" width="6" height="114" rx="3" fill="#9aa0a6"/>
-    <text x="46" y="398" fill="#c3c7cc" font-size="13" font-weight="700">BUTTONS · INPUT_PULLUP (active-LOW)</text>
+    <text x="46" y="398" fill="#c3c7cc" font-size="13" font-weight="700">BUTTONS · INPUT_PULLUP (active-LOW)(ALL TO S3 GND)</text>
     <text x="46" y="420" fill="#d7cfc8" font-size="13">UP</text>    <text x="352" y="420" fill="#c3c7cc" font-size="13" text-anchor="end">GPIO1</text>
     <text x="46" y="440" fill="#d7cfc8" font-size="13">DOWN</text>  <text x="352" y="440" fill="#c3c7cc" font-size="13" text-anchor="end">GPIO2</text>
     <text x="46" y="460" fill="#d7cfc8" font-size="13">SELECT</text><text x="352" y="460" fill="#c3c7cc" font-size="13" text-anchor="end">GPIO14</text>
@@ -52,8 +57,7 @@
     <rect x="392" y="80" width="340" height="74" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
     <rect x="392" y="80" width="6" height="74" rx="3" fill="#f0983a"/>
     <text x="410" y="100" fill="#f0983a" font-size="13" font-weight="700">BadUSB · UART2 @ 9600</text>
-    <text x="410" y="122" fill="#d7cfc8" font-size="13">TX (→ payload RX)</text><text x="716" y="122" fill="#f0983a" font-size="13" text-anchor="end">GPIO18</text>
-    <text x="410" y="142" fill="#d7cfc8" font-size="13">RX</text><text x="716" y="142" fill="#f0983a" font-size="13" text-anchor="end">GPIO17</text>
+    <text x="410" y="122" fill="#d7cfc8" font-size="13">P2</text><text x="716" y="122" fill="#f0983a" font-size="13" text-anchor="end">GPIO18</text>
   </g>
 
   <!-- CC1101 Sub-GHz -->
@@ -65,6 +69,8 @@
     <text x="410" y="228" fill="#d7cfc8" font-size="13">CSN</text> <text x="716" y="228" fill="#b07cf0" font-size="13" text-anchor="end">GPIO3</text>
     <text x="410" y="248" fill="#d7cfc8" font-size="13">GDO0</text><text x="716" y="248" fill="#b07cf0" font-size="13" text-anchor="end">GPIO38</text>
     <text x="410" y="268" fill="#d7cfc8" font-size="13">GDO2</text><text x="716" y="268" fill="#b07cf0" font-size="13" text-anchor="end">GPIO33</text>
+    <text x="46" y="122" fill="#d7cfc8" font-size="13">GND</text><text x="352" y="122" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck -</text>
+    <text x="46" y="142" fill="#d7cfc8" font-size="13">VCC</text><text x="352" y="142" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck +</text>
   </g>
 
   <!-- I2S MIC -->
@@ -72,6 +78,8 @@
     <rect x="392" y="292" width="340" height="94" rx="8" fill="#1f1f25" stroke="#2c2c33"/>
     <rect x="392" y="292" width="6" height="94" rx="3" fill="#f07cb0"/>
     <text x="410" y="312" fill="#f07cb0" font-size="13" font-weight="700">I²S MIC · MS3625 · optional</text>
+    <text x="46" y="122" fill="#d7cfc8" font-size="13">GND</text><text x="352" y="122" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck -</text>
+    <text x="46" y="142" fill="#d7cfc8" font-size="13">VCC</text><text x="352" y="142" fill="#35c2b0" font-size="13" text-anchor="end">3.3v Buck +</text>
     <text x="410" y="334" fill="#d7cfc8" font-size="13">BCLK</text>     <text x="716" y="334" fill="#f07cb0" font-size="13" text-anchor="end">GPIO4</text>
     <text x="410" y="354" fill="#d7cfc8" font-size="13">WS / LRCK</text><text x="716" y="354" fill="#f07cb0" font-size="13" text-anchor="end">GPIO5</text>
     <text x="410" y="374" fill="#d7cfc8" font-size="13">DIN</text>      <text x="716" y="374" fill="#f07cb0" font-size="13" text-anchor="end">GPIO6</text>
